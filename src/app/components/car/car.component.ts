@@ -60,15 +60,14 @@ export class CarComponent implements OnInit {
     })
   }
 
-  addToCart(car:Car){
+  addToCart(car: Car) {
     if(car.carId===1){
-      this.toastrService.error("Hata", "bu ürün sepete eklenemez")
+      this.toastrService.error("Hata", "Bu ürün sepete eklenemez")
     }
     else{
       this.toastrService.success("Sepete eklendi", car.brandName)
       this.cartService.addToCart(car);
     }
-  }
   
-
+  }
 }
